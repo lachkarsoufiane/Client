@@ -12,21 +12,26 @@ const Navbar = () => {
 
   return (
     <nav className="flex text-[#545454] items-center h-[8vh] justify-between px-6 mx-auto ">
-      <div className="flex h-full w-full max-w-[75rem] min items-center justify-between mx-auto">
-        <div className="flex h-[25px] items-center text-[20px]">
+      <div className="flex h-full w-full text-[13px] font-semibold max-w-[75rem] min items-center justify-between mx-auto">
+        <div className="flex h-[25px] items-center text-[20px] w-[120px]">
           <img className="h-[100%]" src="/main_logo.svg" alt="logo" />
           <p className="font-semibold ml-[10px]">Triphack</p>
         </div>
-        <ul className="hidden md:flex text-[15px] ">
+        <ul className="hidden md:flex">
           {menuItems.map((item, index) => (
             <li key={index} className="p-4">
               {item}
             </li>
           ))}
         </ul>
+        <div className="w-[120px]">
+          <button className=" ml-auto hidden md:flex items-center bg-black w-fit h-[37px] px-4 rounded-lg text-white bg-gradient-to-r from-[#75D3FF] to-[#15B0F8]">
+            Sign up
+          </button>
+        </div>
       </div>
       <div
-        className="block z-10 md:hidden"
+        className="block z-50 md:hidden"
         onClick={handleNav}
         aria-label="Toggle menu"
       >
